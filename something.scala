@@ -23,4 +23,5 @@ class SafeSqlController @Inject()(db: Database) extends Controller {
       case None => BadRequest("Invalid username")
     }
   }
+  
 }
