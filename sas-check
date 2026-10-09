@@ -1,0 +1,22 @@
+import sqlite3
+
+def get_user(username):
+    conn = sqlite3.connect('db.sqlite3')
+    cursor = conn.cursor()
+    query = "SELECT * FROM users WHERE username = '" + username + "'"
+    cursor.execute(query)
+    return cursor.fetchall()
+
+
+const { exec } = require('child_process');
+
+function runCommand(userInput) {
+    exec('ls ' + userInput, (error, stdout) => {
+        console.log(stdout);
+    });
+}
+
+
+def connect_db():
+    password = "SuperSecret123!"
+    return connect(host="localhost", password=password)
